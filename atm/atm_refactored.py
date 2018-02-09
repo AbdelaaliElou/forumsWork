@@ -1,5 +1,3 @@
-# balacne = 500
-
 
 def withdraw(balance, request):
     if request < 0:
@@ -28,8 +26,8 @@ def withdraw(balance, request):
             request = 0
     return balance
 
-
-balance = withdraw(5425425528728278, 5425425)
+balacne = 500
+balance = withdraw(balance, 5425425)
 balance = withdraw(balance, 225)
-print balance
+# print balance
 balance = withdraw(balance, 666)
