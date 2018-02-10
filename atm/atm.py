@@ -32,5 +32,5 @@ class Atm:
                     print 'given', request
                     request = 0
         print '=' * len(welcome_to + current_balance)
-        return self.atm_balance
+        # return self.atm_balance
 
