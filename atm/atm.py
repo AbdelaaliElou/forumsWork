@@ -2,6 +2,7 @@ class Atm:
     def __init__(self, atm_balance, bank_name):
         self.atm_balance = atm_balance
         self.bank_name = bank_name
+        self.withdrawal_history = []
 
     def withdraw(self, request):
         welcome_to = 'Welcome to ' + self.bank_name
@@ -15,6 +16,7 @@ class Atm:
             print 'pls enter a positive number.'
         else:
             self.atm_balance -= request
+            self.withdrawal_history.append(request)
             while request > 0:
                 if request >= 100:
                     request -= 100
@@ -34,3 +36,6 @@ class Atm:
         print '=' * len(welcome_to + current_balance)
         # return self.atm_balance
 
+    def show_withdraw_history(self):
+        for withdraw in self.withdrawal_history:
+            print withdraw
