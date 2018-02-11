@@ -17,24 +17,28 @@ class Atm:
         else:
             self.atm_balance -= request
             self.withdrawal_history.append(request)
-            while request > 0:
-                if request >= 100:
-                    request -= 100
-                    print 'given 100'
-                elif request >= 50:
-                    request -= 50
-                    print 'given 50'
-                elif request >= 10:
-                    request -= 10
-                    print 'given 10'
-                elif request >= 5:
-                    print 'given', request
-                    request -= 5
-                elif request < 5:
-                    print 'given', request
-                    request = 0
+            self.do_request(request)
         print '=' * len(welcome_to + current_balance)
         # return self.atm_balance
+
+    @staticmethod
+    def do_request(request):
+        while request > 0:
+            if request >= 100:
+                request -= 100
+                print 'given 100'
+            elif request >= 50:
+                request -= 50
+                print 'given 50'
+            elif request >= 10:
+                request -= 10
+                print 'given 10'
+            elif request >= 5:
+                print 'given', request
+                request -= 5
+            elif request < 5:
+                print 'given', request
+                request = 0
 
     def show_withdraw_history(self):
         for withdraw in self.withdrawal_history:
