@@ -4,8 +4,10 @@ class Member:
         self.name = name
         self.age = age
 
-    def show_member(self):
-        print ('Name: {}\t\tAge: {}'.format(self.name, self.age))
+    # def show_member(self):
+    #    print ('Name: {}\t\tAge: {}'.format(self.name, self.age))
+    def __str__(self):
+        return 'Name: {}\t\tAge: {}'.format(self.name, self.age)
 
 
 class Post:
@@ -14,8 +16,8 @@ class Post:
         self.body = body
         self.author = Member(author_name, author_age)   # Member
 
-    def show_topic(self):
-        print ('Title:{}\t\t\tAuthor{}\n{}'.format(self.title, self.author.name, self.body))
+    # def show_topic(self):
+    #    print ('Title:{}\t\t\tAuthor{}\n{}'.format(self.title, self.author.name, self.body))
 
-    # def show_author(self):
-    #     print ('author name: {}\t\tauthor age: {}'.format(self.author.name, self.author.age))
+    def show_author(self):
+         print ('author name: {}\t\tauthor age: {}'.format(self.author.name, self.author.age))
