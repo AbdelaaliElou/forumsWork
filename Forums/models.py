@@ -12,10 +12,11 @@ class Member:
 
 
 class Post:
-    def __init__(self, title, body, author_name, author_age):
+    def __init__(self, title, body, author, post_id):
         self.title = title
         self.body = body
-        self.author = Member(author_name, author_age)   # Member
+        self.author = author   # Member
+        self.post_id = post_id
 
     # def show_topic(self):
     #    print ('Title:{}\t\t\tAuthor{}\n{}'.format(self.title, self.author.name, self.body))
