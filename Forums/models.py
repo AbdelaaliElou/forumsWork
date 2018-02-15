@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 class Member:
-    def __init__(self, name, age):
+    def __init__(self, name, age, mem_id):
         self.name = name
         self.age = age
+        self.mem_id = mem_id
 
     # def show_member(self):
     #    print ('Name: {}\t\tAge: {}'.format(self.name, self.age))
